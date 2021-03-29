@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title>Liste des Tableaux</title>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	        <link rel="stylesheet" type="text/css" href="/css/style.css"/>	
+	</head>
+	<body>
+		<h1>Les tableaux</h1>
+		
+		<a href='add'>Ajouter un tableau</a>
+						
+		<table>
+                    <tr>
+                        <th>Titre</th>
+                        <th>Support</th>
+                        <th>Dimension</th>
+                        <th>Auteur</th>
+                        <th>Action</th>
+                    </tr>
+			
+                        <tr th:each="t: ${tableaux}"> 
+                            
+                                <td> <em th:text="${t.nom}">Le titre du tableau</em></td>
+                                <td><em th:text="${t.support}">Le support du tableau</em></td>
+                                <td><em th:text="${t.dimension}">La dimension du tableau</em></td>
+                                <td><em th:text="${t.auteur}">Le nom de l'auteur</em></td>
+                                
+                                
+                                <td><a href="delete?id=1">Supprimer le tableau n° 1</a></td>
+                        </tr>
+			
+                        
+		</table>
+		<hr/>
+		<a href="/">Retour au menu</a>
+		<hr/>
+	</body>
+</html>

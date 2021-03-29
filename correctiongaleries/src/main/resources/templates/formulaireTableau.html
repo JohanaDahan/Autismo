@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Ajouter un tableau</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" type="text/css" href="/css/style.css"/>	
+    </head>
+    <body>
+        <h1>Ajouter un tableau</h1>
+        
+        
+        <form method="POST" action="save">
+            <div class="column">
+                <label for="titre">titre:</label>
+                
+                <input id="titre" type="text" placeholder="Titre du tableau" th:field="*{titre}"/>
+                <hr/>
+                <input type="submit" value="Enregistrer" /> <input type="reset" value="Réinitialiser" />
+            </div>
+            <div class="column">
+                <label for="auteur">Auteur:</label>
+                <select id="auteur" name="auteur" th:field="*{auteur}">
+                    <option value="0">Auteur inconnu</option>
+                    
+                    <option value="1">Pablo Picasso</option>
+                    
+                    <option value="2">Cy Twombly</option>
+                </select>
+                <label for="support">Support:</label>
+                <input id="support" type="text" placeholder="support, ex: Huile sur toile" th:field="*{support}"/>				
+                <label for="dimension">Dimensions:</label>
+                <input id="dimension" type="text" placeholder="dimensions, ex: 1m x 2m" th:field="*{dimension}" />				
+            </div>
+        </form>		
+        <hr/>
+        <a href="/">Retour au menu</a>
+        <hr/>
+    </body>
+</html>
