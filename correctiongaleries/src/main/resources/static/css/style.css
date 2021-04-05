@@ -114,6 +114,7 @@ tr:nth-child(even) {
 th {
   background-color: #7ca8d4;
   color: white;
+  width : 50%
 }
 .oui {
   margin-left: 4px;
