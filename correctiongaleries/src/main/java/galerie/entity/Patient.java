@@ -19,6 +19,8 @@ public class Patient {
     @NonNull
     private String prenom;
     
+    private String datedenaissance;
+    
     @Column(unique=true)
     private String adresse;
     
@@ -33,6 +35,8 @@ public class Patient {
     
     @NonNull @Column (unique=true)
     private String identifiant;
+    
+    
     
     
     /*@OneToMany(mappedBy = "client")
