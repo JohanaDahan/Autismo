@@ -13,7 +13,7 @@
         </div>
 
         <ul>
-            <li class="active"><a href="afficheDonneesPersonnellesPatient.html">Données Personnelles </a></li>
+            <li class="active"><a>Données Personnelles</a></li>
             <li><a href="">Suivi</a></li>
             <li><a href="">Contact Médecin </a></li>
             <li><a href="">Messagerie</a></li>
@@ -25,12 +25,16 @@
                 <th></th>
             </tr>
             <tr>
+                <td>Identifiant</td>
+                <td>L'identifiant du patient</td><!--th:text="${p.identifiant}"-->
+            </tr>
+            <tr>
                 <td>Nom</td>
-                <!--<td th:text="${p.nom}">Le nom du patient </td>-->
+                <td >Le nom du patient </td><!--th:text="${p.nom}"-->
             </tr>
             <tr>
                 <td>Prénom</td>
-                <!--<td th:text="${p.prenom}">Le prénom du patient</td>-->
+                <td >Le prénom du patient</td><!--th:text="${p.prenom}"-->
             </tr>
             <tr>
                 <td>Sexe</td>
@@ -38,26 +42,23 @@
             </tr>
             <tr>
                 <td>Date de naissance</td>
-                <!--<td th:text="${p.datedenaissance}">La date de naissance du patient</td>-->
+                <td >La date de naissance du patient</td><!--th:text="${p.datedenaissance}"-->
             </tr>
             <tr>
                 <td>Adresse</td>
-                <!--<td th:text="${p.adresse}">L'adresse du patient</td>-->
+               <td >L'adresse du patient</td> <!--th:text="${p.adresse}"-->
             </tr>
             <tr>
                 <td>Tél.</td>
-                <!--<td th:text="${p.numeroDeTel}">Le numéro du patient</td>-->
+                <td >Le numéro du patient</td><!--th:text="${p.numeroDeTel}"-->
             </tr>
             <tr>
                 <td>Adresse mail</td>
-                <!--<td th:text="${p.email}">L'adresse mail du patient</td>-->
+                <td >L'adresse mail du patient</td><!--th:text="${p.email}"-->
             </tr>
-            <tr>
-                <td>Identifiant</td>
-                <!--<td th:text="${p.identifiant}">L'identifiant du patient</td>-->
-            </tr>
+            
         </table>
-        <hr>
+        <hr/>
         <!--/* On appelle l'URL 'add' du contôleur */-->
         <a th:href="@{add}" href='formulairePatient.html'>Ajouter une donnée</a>
         <!--/* On affiche un éventuel message d'erreur */-->
