@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>DPP</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}" href="../static/css/style.css"/>	
+    </head>
+    <body>
+        
+        <div class="header">
+            <h1>Autismo No : La solution à vos problèmes</h1>
+        </div>
+
+        <ul>
+            <li class="active"><a href="afficheDonneesPersonnellesProfessionnelDeSante.html">Données Personnelles </a></li>
+            <li><a href="">Messagerie</a></li>
+        </ul>
+
+        <table>
+            <tr>
+                <th>Données Personnelles </th>
+                <th></th>
+            </tr>
+            <tr>
+                <td>Nom</td>
+                <!--<td th:text="${p.nom}">Le nom du patient </td>-->
+            </tr>
+            <tr>
+                <td>Prénom</td>
+                <!--<td th:text="${p.prenom}">Le prénom du patient</td>-->
+            </tr>
+            <tr>
+                <td>Sexe</td>
+                <td>Homme</td>
+            </tr>
+            <tr>
+                <td>Date de naissance</td>
+                <!--<td th:text="${p.datedenaissance}">La date de naissance du patient</td>-->
+            </tr>
+            <tr>
+                <td>Adresse professionnel</td>
+                <!--<td th:text="${p.adresse}">L'adresse du patient</td>-->
+            </tr>
+            <tr>
+                <td>Tél.</td>
+                <!--<td th:text="${p.numeroDeTel}">Le numéro du patient</td>-->
+            </tr>
+            <tr>
+                <td>Adresse mail</td>
+                <!--<td th:text="${p.email}">L'adresse mail du patient</td>-->
+            </tr>
+            <tr>
+                <td>Identifiant</td>
+                <!--<td th:text="${p.identifiant}">L'identifiant du patient</td>-->
+            </tr>
+        </table>
+        <hr/>
+        <!--/* On appelle l'URL 'add' du contôleur */-->
+        <a th:href="@{add}" href='formulaireProfessionnelDeSante.html'>Ajouter une donnée</a>
+        <!--/* On affiche un éventuel message d'erreur */-->
+        <h3 th:text="${message}">Message de succès ou d'erreur</h3>
+        <hr/>
+        <a th:href="@{/}" href="../static/index.html">Retour au menu</a>
+        <hr/>
+        
+    </body>
+</html>
+
