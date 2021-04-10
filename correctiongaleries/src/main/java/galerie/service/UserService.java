@@ -1,6 +1,6 @@
 package galerie.service;
 
-import galerie.entity.Utilisateur;
+import AutisMono.entity.Utilisateur;
 
 public interface UserService {
     void initializeRolesAndAdmin();

@@ -1,6 +1,6 @@
-package galerie.dao;
+package AutisMono.dao;
 
-import galerie.entity.Role;
+import AutisMono.entity.Role;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;

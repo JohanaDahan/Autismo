@@ -1,4 +1,4 @@
-package galerie.controller;
+package AutisMono.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -8,22 +8,22 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import galerie.dao.ProfessionnelDeSanteRepository;
-import galerie.entity.ProfessionnelDeSante;
+import AutisMono.entity.Medecin;
 
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
+import AutisMono.dao.MedecinRepository;
 
 /**
  * Edition des catégories, sans gestion des erreurs
  */
 @Controller
 @RequestMapping(path = "/professionnel")
-public class ProfessionnelDeSanteController {
+public class MedecinController {
 
     @Autowired
-    private ProfessionnelDeSanteRepository dao;
+    private MedecinRepository dao;
 
     /**
      * Affiche toutes les catégories dans la base
@@ -44,7 +44,7 @@ public class ProfessionnelDeSanteController {
      * @return le nom de la vue à afficher ('formulaireGalerie.html')
      */
     @GetMapping(path = "add")
-    public String montreLeFormulairePourAjout(@ModelAttribute("professionnel") ProfessionnelDeSanteController professionnel) {
+    public String montreLeFormulairePourAjout(@ModelAttribute("professionnel") MedecinController professionnel) {
         return "formulaireProfessionelDeSante";
     }
 
@@ -56,7 +56,7 @@ public class ProfessionnelDeSanteController {
      * @return une redirection vers l'affichage de la liste des galeries
      */
     @PostMapping(path = "save")
-    public String ajouteDonnéePuisMontreLaListe(ProfessionnelDeSante professionnel, RedirectAttributes redirectInfo) {
+    public String ajouteDonnéePuisMontreLaListe(Medecin professionnel, RedirectAttributes redirectInfo) {
         String message;
         try {
             // cf. https://www.baeldung.com/spring-data-crud-repository-save
@@ -85,7 +85,7 @@ public class ProfessionnelDeSanteController {
      */
     
     @GetMapping(path = "delete")
-    public String supprimeUneDonnéePuisMontreLaListe(@RequestParam("id") ProfessionnelDeSante professionnel, RedirectAttributes redirectInfo) {
+    public String supprimeUneDonnéePuisMontreLaListe(@RequestParam("id") Medecin professionnel, RedirectAttributes redirectInfo) {
         String message = "Le patient '" + professionnel.getNom() + "' a bien été supprimée";
         try {
             dao.delete(professionnel); // Ici on peut avoir une erreur (Si il y a des expositions pour cette galerie par exemple)

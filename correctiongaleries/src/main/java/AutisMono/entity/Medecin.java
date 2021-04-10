@@ -1,4 +1,4 @@
-package galerie.entity;
+package AutisMono.entity;
 import java.util.LinkedList;
 import java.util.List;
 import javax.persistence.*;
@@ -9,7 +9,7 @@ import lombok.*;
 // cf. https://examples.javacodegeeks.com/spring-boot-with-lombok/
 @Getter @Setter @NoArgsConstructor @RequiredArgsConstructor @ToString
 @Entity // Une entité JPA
-public class ProfessionnelDeSante {
+public class Medecin {
     @Id  @GeneratedValue(strategy = GenerationType.IDENTITY) 
     private Integer id;
 

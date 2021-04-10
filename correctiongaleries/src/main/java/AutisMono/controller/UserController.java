@@ -1,7 +1,7 @@
-package galerie.controller;
+package AutisMono.controller;
 
 import lombok.extern.slf4j.Slf4j;
-import galerie.entity.Utilisateur;
+import AutisMono.entity.Utilisateur;
 import org.springframework.security.access.annotation.Secured;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.stereotype.Controller;

@@ -1,10 +1,10 @@
 package galerie.service;
 
 import lombok.extern.slf4j.Slf4j;
-import galerie.dao.RoleRepository;
-import galerie.dao.UserRepository;
-import galerie.entity.Role;
-import galerie.entity.Utilisateur;
+import AutisMono.dao.RoleRepository;
+import AutisMono.dao.UserRepository;
+import AutisMono.entity.Role;
+import AutisMono.entity.Utilisateur;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;

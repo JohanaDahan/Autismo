@@ -1,4 +1,4 @@
-package galerie;
+package AutisMonoApp;
 
 import lombok.extern.slf4j.Slf4j;
 import galerie.service.UserService;
@@ -8,6 +8,9 @@ import org.springframework.security.config.annotation.method.configuration.Enabl
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 
 import javax.annotation.PostConstruct;
+
+
+
 
 @SpringBootApplication
 @EnableWebSecurity // Autorise les annotations de sécurité sur les contrôleurs

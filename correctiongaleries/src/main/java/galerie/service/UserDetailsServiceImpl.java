@@ -1,8 +1,8 @@
 package galerie.service;
 
 import lombok.extern.slf4j.Slf4j;
-import galerie.dao.UserRepository;
-import galerie.entity.Utilisateur;
+import AutisMono.dao.UserRepository;
+import AutisMono.entity.Utilisateur;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;

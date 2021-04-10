@@ -1,4 +1,4 @@
-package galerie.entity;
+package AutisMono.entity;
 
 import lombok.*;
 import org.springframework.security.core.GrantedAuthority;

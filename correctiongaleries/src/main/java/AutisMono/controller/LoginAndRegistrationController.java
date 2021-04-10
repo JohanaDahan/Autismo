@@ -1,6 +1,6 @@
-package galerie.controller;
+package AutisMono.controller;
 
-import galerie.entity.Utilisateur;
+import AutisMono.entity.Utilisateur;
 import galerie.service.SecurityService;
 import galerie.service.UserService;
 import galerie.validator.UserValidator;
