@@ -34,7 +34,7 @@ public class MedecinController {
     @GetMapping(path = "show")
     public String afficheToutesLesDonnées(Model model) {
         model.addAttribute("professionnel de santé", dao.findAll());
-        return "afficheDonnéesPersonnellesProfessionnel";
+        return "DonneesMedecin";
     }
 
     /**
@@ -45,7 +45,7 @@ public class MedecinController {
      */
     @GetMapping(path = "add")
     public String montreLeFormulairePourAjout(@ModelAttribute("professionnel") MedecinController professionnel) {
-        return "formulaireProfessionelDeSante";
+        return "formulaireMedecin";
     }
 
     /**
@@ -78,7 +78,7 @@ public class MedecinController {
     /**
      * Appelé par le lien 'Supprimer' dans 'afficheGaleries.html'
      *
-     * @param patient à partir de l'id de la galerie transmis en paramètre, Spring fera une requête SQL SELECT pour
+     * @param professionnel à partir de l'id de la galerie transmis en paramètre, Spring fera une requête SQL SELECT pour
      * chercher la galerie dans la base
      * @param redirectInfo pour transmettre des paramètres lors de la redirection
      * @return une redirection vers l'affichage de la liste des galeries
@@ -86,12 +86,12 @@ public class MedecinController {
     
     @GetMapping(path = "delete")
     public String supprimeUneDonnéePuisMontreLaListe(@RequestParam("id") Medecin professionnel, RedirectAttributes redirectInfo) {
-        String message = "Le patient '" + professionnel.getNom() + "' a bien été supprimée";
+        String message = "Le professionel de santé '" + professionnel.getNom() + "' a bien été supprimée";
         try {
             dao.delete(professionnel); // Ici on peut avoir une erreur (Si il y a des expositions pour cette galerie par exemple)
         } catch (DataIntegrityViolationException e) {
             // violation de contrainte d'intégrité si on essaie de supprimer une galerie qui a des expositions
-            message = "Erreur : Impossible de supprimer le professionnel de santé '" + professionnel.getNom() + "', il faut d'abord supprimer ses exposiations";
+            message = "Erreur : Impossible de supprimer le professionnel de santé '" + professionnel.getNom() ;
         }
         // RedirectAttributes permet de transmettre des informations lors d'une redirection,
         // Ici on transmet un message de succès ou d'erreur

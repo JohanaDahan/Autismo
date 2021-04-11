@@ -33,7 +33,7 @@ public class PatientController {
     @GetMapping(path = "show")
     public String afficheToutesLesDonnées(Model model) {
         model.addAttribute("patients", dao.findAll());
-        return "afficheDonneesPersonnellesPatient";
+        return "DonneesPatient";
     }
 
     /**
@@ -89,7 +89,7 @@ public class PatientController {
             dao.delete(patient); // Ici on peut avoir une erreur (Si il y a des expositions pour cette galerie par exemple)
         } catch (DataIntegrityViolationException e) {
             // violation de contrainte d'intégrité si on essaie de supprimer une galerie qui a des expositions
-            message = "Erreur : Impossible de supprimer le patient '" + patient.getNom() + "', il faut d'abord supprimer ses exposiation";
+            message = "Erreur : Impossible de supprimer le patient '" + patient.getNom() ;
         }
         // RedirectAttributes permet de transmettre des informations lors d'une redirection,
         // Ici on transmet un message de succès ou d'erreur
