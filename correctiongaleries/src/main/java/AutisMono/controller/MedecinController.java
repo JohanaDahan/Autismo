@@ -33,7 +33,7 @@ public class MedecinController {
      */
     @GetMapping(path = "show")
     public String afficheToutesLesDonnées(Model model) {
-        model.addAttribute("professionnel de santé", dao.findAll());
+        model.addAttribute("p", dao.findAll());
         return "DonneesMedecin";
     }
 
