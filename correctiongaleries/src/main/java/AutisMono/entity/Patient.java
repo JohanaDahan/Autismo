@@ -9,32 +9,12 @@ import lombok.*;
 // cf. https://examples.javacodegeeks.com/spring-boot-with-lombok/
 @Getter @Setter @NoArgsConstructor @RequiredArgsConstructor @ToString
 @Entity // Une entité JPA
-public class Patient {
-    @Id  @GeneratedValue(strategy = GenerationType.IDENTITY) 
-    private Integer id;
 
-    @NonNull
-    private String nom;
+      public class Patient extends Personne{
+    
     
     @NonNull
-    private String prenom;
-    
-    private String datedenaissance;
-    
-    @Column(unique=true)
-    private String adresse;
-    
-    @Column(unique=true)
-    private String numeroDeTel;
-    
-    @Column(unique=true)
-    private String email; 
-    
-    @NonNull
-    private String mdp;
-    
-    @NonNull @Column (unique=true)
-    private String identifiant;
+    private Integer numSecu;
     
     
     

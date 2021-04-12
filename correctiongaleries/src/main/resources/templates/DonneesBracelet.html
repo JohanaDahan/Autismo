@@ -9,22 +9,19 @@
     <body>
         
         <div class="header">
-            <h1>AutisMono</h1>
+            <h1>Autismo No : La solution à vos problèmes</h1>
         </div>
 
         <ul>
-            <li class="active"><a href="DonneesMedecin.html"> Données Personnelles </a></li>
+            <li class="active"><a href="afficheDonneesBracelet.html">Données Personnelles </a></li>
             <li><a href="">Messagerie</a></li>
+            
         </ul>
 
         <table>
             <tr>
                 <th>Données Personnelles </th>
                 <th></th>
-            </tr>
-             <tr>
-                <td>Identifiant</td>
-                <td th:text="${p.identifiant}">L'identifiant du patient</td>
             </tr>
             <tr>
                 <td>Nom</td>
@@ -54,11 +51,14 @@
                 <td>Adresse mail</td>
                 <!--<td th:text="${p.email}">L'adresse mail du patient</td>-->
             </tr>
-           
+            <tr>
+                <td>Identifiant</td>
+                <!--<td th:text="${p.identifiant}">L'identifiant du patient</td>-->
+            </tr>
         </table>
         <hr/>
         <!--/* On appelle l'URL 'add' du contôleur */-->
-        <a th:href="@{add}" href='formulaireMedecin.html'>Ajouter une donnée</a>
+        <a th:href="@{add}" href='formulaireProfessionnelDeSante.html'>Ajouter une donnée</a>
         <!--/* On affiche un éventuel message d'erreur */-->
         <h3 th:text="${message}">Message de succès ou d'erreur</h3>
         <hr/>
@@ -67,4 +67,5 @@
         
     </body>
 </html>
+
 
