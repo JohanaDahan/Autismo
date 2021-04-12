@@ -1,9 +1,9 @@
 package AutisMono.controller;
 
 import AutisMono.entity.Utilisateur;
-import galerie.service.SecurityService;
-import galerie.service.UserService;
-import galerie.validator.UserValidator;
+import AutisMono.service.SecurityService;
+import AutisMono.service.UserService;
+import AutisMono.validator.UserValidator;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;

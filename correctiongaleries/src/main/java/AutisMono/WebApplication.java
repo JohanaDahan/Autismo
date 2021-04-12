@@ -1,7 +1,7 @@
-package AutisMonoApp;
+package AutisMono;
 
 import lombok.extern.slf4j.Slf4j;
-import galerie.service.UserService;
+import AutisMono.service.UserService;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;

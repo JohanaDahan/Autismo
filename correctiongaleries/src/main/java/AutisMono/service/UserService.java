@@ -1,4 +1,4 @@
-package galerie.service;
+package AutisMono.service;
 
 import AutisMono.entity.Utilisateur;
 

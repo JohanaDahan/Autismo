@@ -1,6 +1,6 @@
-package galerie.service;
+package AutisMono.service;
 
-import galerie.service.SecurityService;
+import AutisMono.service.SecurityService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Qualifier;

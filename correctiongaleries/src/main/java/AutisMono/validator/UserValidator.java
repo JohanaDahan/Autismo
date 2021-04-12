@@ -1,7 +1,7 @@
-package galerie.validator;
+package AutisMono.validator;
 
 import AutisMono.entity.Utilisateur;
-import galerie.service.UserService;
+import AutisMono.service.UserService;
 import org.springframework.stereotype.Component;
 import org.springframework.validation.Errors;
 import org.springframework.validation.ValidationUtils;

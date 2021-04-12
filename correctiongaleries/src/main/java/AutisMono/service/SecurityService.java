@@ -1,4 +1,4 @@
-package galerie.service;
+package AutisMono.service;
 
 public interface SecurityService {
     String findLoggedInUsername();
