@@ -12,7 +12,7 @@
     <body>
 
         <div class="container">
-            <form method="POST" th:action="@{/login}" action="#" class="form-signin">
+            <form method="POST" th:action="@{/login}" action="#" class="form-signin bg-primary">
                 <h2 class="form-heading">Log in</h2>
 
                 <div  class="form-group" th:classappend="${#strings.isEmpty(error) ? 'has-error' : ''}">

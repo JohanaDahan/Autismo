@@ -1,4 +1,5 @@
 package AutisMono.entity;
+import java.util.Date;
 import java.util.LinkedList;
 import java.util.List;
 import javax.persistence.*;
@@ -10,12 +11,14 @@ import lombok.*;
 @Getter @Setter @NoArgsConstructor @RequiredArgsConstructor @ToString
 @Entity // Une entité JPA
 
-      public class Patient extends Personne{
+      public class Patient extends Personne {
     
     
     @NonNull
     private Integer numSecu;
     
+    @NonNull
+    private Date dateNaissance;
     
     
     

@@ -9,30 +9,30 @@ import lombok.*;
 // cf. https://examples.javacodegeeks.com/spring-boot-with-lombok/
 @Getter @Setter @NoArgsConstructor @RequiredArgsConstructor @ToString
 @Entity // Une entité JPA
-public class Personne {
-    @Id  @GeneratedValue(strategy = GenerationType.IDENTITY) 
-    private Integer id;
+public class Personne extends Utilisateur {
+    //@Id  @GeneratedValue(strategy = GenerationType.IDENTITY) 
+    //private Integer id;
 
     @NonNull
     private String nom;
     
     @NonNull
     private String prenom;
-    
+
+    @Column(unique=true)
+    private String adresse;
+     
      @NonNull
     private String ville;
      
     @Column(unique=true)
-    private String adresse;
-    
-    @Column(unique=true)
     private String numtel;
     
-    @Column(unique=true)
-    private String email; 
+    //@Column(unique=true)
+    //private String email; 
     
-    @NonNull
-    private String mdp;
+    //@NonNull
+    //private String mdp;
     
     
 }
