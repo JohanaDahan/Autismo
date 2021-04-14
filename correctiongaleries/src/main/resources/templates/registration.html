@@ -4,39 +4,49 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Page utilisateur</title>
-        <link rel="stylesheet" type="text/css" th:href="@{/css/bootstrap.min.css}" href="../static/css/bootstrap.min.css" />
-        <link rel="stylesheet" type="text/css" th:href="@{/css/common.css}" href="../static/css/common.css" />
+        <!--<link rel="stylesheet" type="text/css" th:href="@{/css/bootstrap.min.css}" href="../static/css/bootstrap.min.css" />
+        <link rel="stylesheet" type="text/css" th:href="@{/css/common.css}" href="../static/css/common.css" /> -->
+        <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}" href="../static/css/style.css" />
+
     </head>
 
     <body>
 
         <div class="container">
 
-            <form method="POST" th:object="${userForm}" th:action="@{/registration}" class="form-signin">
-                <h2 class="form-signin-heading">Create your account</h2>
-                <div class='form-group' th:classappend="${#fields.hasErrors('username') ? 'has-error' : ''}">
-                    <input type="text" th:field="*{username}" class="form-control" placeholder="User name"
+            <form method="POST" th:object="${userForm}" th:action="@{/registration}">
+                <h2 >Créez votre compte</h2>
+                <!--<div  th:classappend="${#fields.hasErrors('name') ? 'has-error' : ''}">
+                    <input type="name"  th:field="*{name}" placeholder="Nom" />
+                    <ul><li th:errors="*{name}">Erreur sur le nom</li></ul>
+                </div>
+                <div  th:classappend="${#fields.hasErrors('firstname') ? 'has-error' : ''}">
+                    <input type="firstname"  th:field="*{firstname}" placeholder="Prénom" />
+                    <ul><li th:errors="*{password}">Erreur sur le prénom</li></ul>
+                </div>-->
+                <div  th:classappend="${#fields.hasErrors('username') ? 'has-error' : ''}">
+                    <input type="text" th:field="*{username}" placeholder="Identifiant"
                            autofocus="true"/>
                     <ul><li th:errors="*{username}">Erreur sur le nom</li></ul>
                 </div>
                 
-                <div class='form-group' th:classappend="${#fields.hasErrors('email') ? 'has-error' : ''}">
-                    <input type="email" th:field="*{email}" class="form-control" placeholder="Nom.Prenom@somewhere.com"/>
+                <div th:classappend="${#fields.hasErrors('email') ? 'has-error' : ''}">
+                    <input type="email" th:field="*{email}"  placeholder="Nom.Prenom@somewhere.com"/>
                     <ul><li th:errors="*{email}">Erreur sur le mail</li></ul>
                 </div>
 
-                <div class='form-group' th:classappend="${#fields.hasErrors('password') ? 'has-error' : ''}">
-                    <input type="password"  th:field="*{password}"  class="form-control" placeholder="Password" />
+                <div  th:classappend="${#fields.hasErrors('password') ? 'has-error' : ''}">
+                    <input type="password"  th:field="*{password}" placeholder="Mot de passe" />
                     <ul><li th:errors="*{password}">Erreur sur le password</li></ul>
                 </div>
 
-                <div class='form-group' th:classappend="${#fields.hasErrors('passwordConfirm') ? 'has-error' : ''}">
-                    <input type="password"  th:field="*{passwordConfirm}"  class="form-control"
-                           placeholder="Confirm your password" />
+                <div th:classappend="${#fields.hasErrors('passwordConfirm') ? 'has-error' : ''}">
+                    <input type="password"  th:field="*{passwordConfirm}"
+                           placeholder="Confirmation de mot de passe" />
                     <ul><li th:errors="*{passwordConfirm}">Erreur confirmation password</li></ul>
                 </div>
 
-                <button class="btn btn-lg btn-primary btn-block" type="submit">Submit</button>
+                <button type="submit" class="btn">S'inscrire</button>
             </form>
 
         </div>
