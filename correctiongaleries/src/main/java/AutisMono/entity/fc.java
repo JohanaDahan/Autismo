@@ -7,6 +7,10 @@ package AutisMono.entity;
 
 import static java.lang.Thread.sleep;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -16,11 +20,14 @@ import java.util.logging.Logger;
  */
 class fc {
 
-    
+    public ArrayList<fc> listfc;
+   
+      private  fc [] tabfc = new fc[100];
      private int myFc;
-     
      private LocalDateTime myDate;
+     
 
+ 
     public fc(int myFc, LocalDateTime myDate) {
         this.myFc = myFc;
         this.myDate = myDate;
@@ -28,12 +35,13 @@ class fc {
  
  
     public void simulFc (){ 
+      
         
              try {
-                for (int i = 0; i <= 100; i++) {
-                
-                System.out.println((int) (170*Math.random()+50)); 
-                Thread.sleep(1000);
+                for (int i = 0; i <= 100; i++) {                 
+               tabfc=listfc.add((170*Math.random()+50));
+               System.out.println((int) (170*Math.random()+50)); 
+               Thread.sleep(1000);
                 }
             } catch (InterruptedException ex) {
            
@@ -41,10 +49,9 @@ class fc {
          
                      
          
+    }
+         
     
-         
-    }    
-         
        @Override  
          
     public String toString() {

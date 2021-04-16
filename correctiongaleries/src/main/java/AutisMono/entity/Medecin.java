@@ -1,6 +1,7 @@
 package AutisMono.entity;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Vector;
 import javax.persistence.*;
 import lombok.*;
 
@@ -14,8 +15,36 @@ public class Medecin extends Personne {
     //private Integer id;
     
    @NonNull
-   private Integer rpps; 
+   private Integer num_rpps; 
+      @NonNull
+   private String specialite; 
+         @NonNull
+   private Integer diplome; 
     
+         
+    /* public int Notif(String time , int freq)
+    {
+     
+            if((freq< 80) && (freq> 40))
+            {
+                
+                System.out.println("Heart rate is normal: "+freq);
+            }
+            if(freq>=80)
+            {
+                
+                System.out.println("sending mail to doctor and neighbors because fr>80: "+freq);
+            }
+            if(freq<=40)
+            {
+                
+                System.out.println("sending mail to doctor and neighbors because fr<40: "+freq);
+            }
+            
+            return 0;    
+        }
+        return freq;
+    }
     
     /*@OneToMany(mappedBy = "client")
     @ToString.Exclude
