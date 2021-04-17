@@ -2,7 +2,8 @@
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
- */
+*/
+ 
 package AutisMono.entity;
 
 import java.util.ArrayList;
@@ -30,9 +31,11 @@ public class HistoriqueFc {
      *
      * @param fc the event to add
      */
+     
     public void addfc(fc fc) {
         // TODO : implémenter cette méthode
         this.frequencecardiaque.add(fc);
 
     }
 }
+

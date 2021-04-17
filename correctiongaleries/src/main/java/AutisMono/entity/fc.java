@@ -2,7 +2,8 @@
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
- */
+*/
+
 package AutisMono.entity;
 
 import static java.lang.Thread.sleep;
@@ -18,11 +19,11 @@ import java.util.logging.Logger;
  *
  * @author johan
  */
-class fc {
+public class fc {
 
     public ArrayList<fc> listfc;
    
-      private  fc [] tabfc = new fc[100];
+     private  fc [] tabfc = new fc[100];
      private int myFc;
      private LocalDateTime myDate;
      
@@ -52,8 +53,7 @@ class fc {
     }
          
     
-       @Override  
-         
+    @Override       
     public String toString() {
         return "fc{" + "myFc=" + myFc + ", myDate=" + myDate + ", myDuration=" +'}';
     }
