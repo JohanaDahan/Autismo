@@ -12,13 +12,21 @@ import lombok.*;
 @Entity // Une entité JPA
 
       public class Patient extends Utilisateur {
+
+    public Patient( String username, String password, String nom, String prenom, String adresse, String ville, String email, Integer numtel,String numsecu, Date datenaissance) {
+        super(username, password, nom, prenom, adresse, ville, email, numtel);
+        this.numsecu = numsecu;
+        this.datenaissance = datenaissance;
+    }
     
     
     @NonNull
-    private String numSecu;
+    private String numsecu;
     
     @NonNull
-    private Date dateNaissance;
+    private Date datenaissance;
+    
+    
     
     
     
