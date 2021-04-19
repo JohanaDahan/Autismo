@@ -26,11 +26,11 @@
             </tr>
             <tr>
                 <td>Identifiant</td>
-                <td><span th:text="${#authentication.name}">Untel</span></td>
+                <td><span th:text="${#authentication.username}">Untel</span></td>
             </tr>
             <tr>
                 <td>Nom</td>
-                <td >Le nom du patient </td><!--th:text="${p.nom}"-->
+                <td ><span th:text="${#authentication.name}">Le nom du patient </span></td><!--th:text="${p.nom}"-->
             </tr>
             <tr>
                 <td>Prénom</td>
