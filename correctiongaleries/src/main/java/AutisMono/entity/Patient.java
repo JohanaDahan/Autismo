@@ -15,7 +15,7 @@ import lombok.*;
     
     
     @NonNull
-    private Integer numSecu;
+    private String numSecu;
     
     @NonNull
     private Date dateNaissance;
