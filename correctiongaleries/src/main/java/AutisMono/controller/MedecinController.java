@@ -40,7 +40,7 @@ public class MedecinController {
     /**
      * Montre le formulaire permettant d'ajouter une galerie
      *
-     * @param patient initialisé par Spring, valeurs par défaut à afficher dans le formulaire
+     * @param professionnel
      * @return le nom de la vue à afficher ('formulaireGalerie.html')
      */
     @GetMapping(path = "add")

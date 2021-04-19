@@ -11,7 +11,7 @@ import lombok.*;
 @Getter @Setter @NoArgsConstructor @RequiredArgsConstructor @ToString
 @Entity // Une entité JPA
 
-      public class Patient extends Personne {
+      public class Patient extends Utilisateur {
     
     
     @NonNull

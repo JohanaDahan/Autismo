@@ -10,17 +10,18 @@ import lombok.*;
 // cf. https://examples.javacodegeeks.com/spring-boot-with-lombok/
 @Getter @Setter @NoArgsConstructor @RequiredArgsConstructor @ToString
 @Entity // Une entité JPA
-public class Medecin extends Personne {
+public class Medecin extends Utilisateur {
     //@Id  @GeneratedValue(strategy = GenerationType.IDENTITY) 
     //private Integer id;
     
    @NonNull
-   private Integer num_rpps; 
-      @NonNull
+   private String numrpps; 
+   @NonNull
    private String specialite; 
-         @NonNull
+   @NonNull
    private Integer diplome; 
     
+   
          
     /* public int Notif(String time , int freq)
     {
@@ -65,5 +66,14 @@ public class Medecin extends Personne {
                 .reduce(0f, Float::sum); // On additionne
        
     }*/   
+
+    public Medecin(String username, String password, String nom, String prenom, String adresse, String ville, String email, Integer numtel, String numrpps, String specialite, Integer diplome) {
+        super(username, password, nom, prenom, adresse, ville, email, numtel);
+        this.numrpps = numrpps;
+        this.specialite = specialite;
+        this.diplome = diplome;
+    }
+
+    
 }
 

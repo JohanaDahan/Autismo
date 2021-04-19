@@ -34,13 +34,29 @@ public class Utilisateur implements UserDetails {
 
     @NonNull // Lombok
     private String password;
+    
+        @NonNull
+    private String nom;
+    
+    @NonNull
+    private String prenom;
 
+    @NonNull
+    private String adresse;
+     
+     @NonNull
+    private String ville;
+     
     @NonNull // Lombok
     @Email // Doit avoir la forme d'une adresse email
     private String email;
+     
+    @NonNull
+    private Integer numtel;
 
     @Transient // Non enregistré dans la BD
     private String passwordConfirm;
+    
 
     @ManyToMany(fetch = FetchType.EAGER)
     @Setter(AccessLevel.NONE)
