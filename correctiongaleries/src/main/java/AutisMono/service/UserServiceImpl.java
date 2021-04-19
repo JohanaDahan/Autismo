@@ -35,7 +35,7 @@ public class UserServiceImpl implements UserService {
     @Value("${medecin1.email}")
     private String medecin1Email;
     @Value("${medecin1.numtel}")
-    private Integer medecin1Numtel;
+    private String medecin1Numtel;
     @Value("${medecin1.numrpps}")
     private String medecin1Numrpps;
     @Value("${medecin1.specialite}")
@@ -59,7 +59,7 @@ public class UserServiceImpl implements UserService {
     @Value("${patient1.email}")
     private String patient1Email;
     @Value("${patient1.numtel}")
-    private Integer patient1Numtel;
+    private String patient1Numtel;
     @Value("${patient1.numsecu}")
     private String patient1Numsecu;
     @Value("${patient1.datenaissance}")

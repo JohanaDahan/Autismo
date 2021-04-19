@@ -52,7 +52,7 @@ public class Utilisateur implements UserDetails {
     private String email;
      
     @NonNull
-    private Integer numtel;
+    private String numtel;
 
     @Transient // Non enregistré dans la BD
     private String passwordConfirm;

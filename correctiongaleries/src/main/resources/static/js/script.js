@@ -1,4 +1,4 @@
-document.getElementById('choix').addEventListener('click', choixRegistration);
+document.getElementById('choix').addEventListener('click', choixRegistration2);
 
 function choixRegistration(){
    let medecin = document.getElementById('medecin');
@@ -16,6 +16,25 @@ function choixRegistration(){
        resHTML += '';
    } document.getElementById("patientmedecin").innerHTML = resHTML;
    //create element
-  // appendChild
+  //appendChild
 }
+}
+
+function choixRegistration2(){
+   let medecin = document.getElementById('medecin').click();
+   let patient = document.getElementById('patient').click();
+   let patoumed = document.getElementById('patoumed');
+   var text = document.createElement("input");
+   text.type = "text";
+   
+   if (medecin){
+   patoumed.appendChild(text);
+   text.placeholder = "Nom";
+   }else{
+    if(patient){
+   patoumed.appendChild(text);
+           
+       }
+   }
+   
 }

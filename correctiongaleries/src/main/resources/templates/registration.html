@@ -29,6 +29,13 @@
                     <input type="firstname"  th:field="*{firstname}" placeholder="Prénom" />
                     <ul><li th:errors="*{password}">Erreur sur le prénom</li></ul>
                 </div>-->
+                <div><p class="choix">
+                    <label for="medecin">Professionnel de santé</label>
+                    <input type="radio" name="choix" id="medecin" value="1" />
+                    <label for="patient"> Patient </label>
+                    <input type="radio" name="choix" id="patient" value="2" />
+                </p>
+                </div> 
                 <div  th:classappend="${#fields.hasErrors('username') ? 'has-error' : ''}">
                     <input type="text" th:field="*{username}" placeholder="Identifiant"
                            autofocus="true"/>
@@ -50,6 +57,7 @@
                            placeholder="Confirmation de mot de passe" />
                     <ul><li class='error' th:errors="*{passwordConfirm}">Erreur confirmation password</li></ul>
                 </div>
+                <div id="patoumed"> </div>
 
                 <button type="submit" class="btn">S'inscrire</button>
             </form>
@@ -58,5 +66,6 @@
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
         <script th:src="@{/js/bootstrap.min.js}" src="../static/js/bootstrap.min.js"></script>
+        <script th:src="@{/js/script.js}" src="../static/js/script.js"></script>
     </body>
 </html>

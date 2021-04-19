@@ -21,7 +21,7 @@ public class Medecin extends Utilisateur {
    @NonNull
    private Integer diplome; 
 
-    public Medecin( String username, String password, String nom, String prenom, String adresse, String ville, String email, Integer numtel, String numrpps, String specialite, Integer diplome) {
+    public Medecin( String username, String password, String nom, String prenom, String adresse, String ville, String email, String numtel, String numrpps, String specialite, Integer diplome) {
         super(username, password, nom, prenom, adresse, ville, email, numtel);
         this.numrpps = numrpps;
         this.specialite = specialite;

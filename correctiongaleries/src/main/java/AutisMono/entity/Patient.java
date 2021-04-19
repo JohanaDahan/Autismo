@@ -13,7 +13,7 @@ import lombok.*;
 
       public class Patient extends Utilisateur {
 
-    public Patient( String username, String password, String nom, String prenom, String adresse, String ville, String email, Integer numtel,String numsecu, Date datenaissance) {
+    public Patient( String username, String password, String nom, String prenom, String adresse, String ville, String email, String numtel,String numsecu, Date datenaissance) {
         super(username, password, nom, prenom, adresse, ville, email, numtel);
         this.numsecu = numsecu;
         this.datenaissance = datenaissance;
