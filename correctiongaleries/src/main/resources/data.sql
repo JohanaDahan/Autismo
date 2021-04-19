@@ -1,14 +1,14 @@
 -- Les données qui seront initialisées automatiquement quand on lance l'application
 -- cf. application.properties
 
-/*INSERT INTO Utilisateur(DTYPE,id,username,password,email,nom, prenom,adresse,ville, numtel, num_secu,date_naissance) VALUES
-    ('Medecin',1,'wasslamenace','WassLaMenace','wass.aityoucef@gmail.com','Aityoucef','Wassim','24 rue de la Tolosane','81100 Castres','0782350075','101026912312312','25/02/1986')
-    ('Medecin',2,'RemiBastide','remibastide','remibastide@gmail.com','Bastide', 'Remi','2 rue de la Paix','81000 Albi','0606060606','193011348648755','18/08/1971')
-    ('Patient',3,'narcolin','jesuiscolin','colin.gay25@gmail.com','Gay','Colin','11 place de la République','81100 Castres','0783734322','198077578943488','20/06/2000')
-    ('Patient',4,'flotov','velodrome13pastis','allezlom@bouillabaisse.com','Thauvin','Florian','51 rue du Pastis','13000 Marseille','0613131313','187068186734057','01/09/2004')
+INSERT INTO Utilisateur(DTYPE,id,username,password,email,nom, prenom,adresse,ville, numtel, num_secu,date_naissance) VALUES
+    ('Medecin',1,'wasslamenace','WassLaMenace','wass.aityoucef@gmail.com','Aityoucef','Wassim','24 rue de la Tolosane','81100 Castres','0782350075','101026912312312',TO_DATE('1986-01-11', 'YYYY-MM-DD')),
+    ('Medecin',2,'RemiBastide','remibastide','remibastide@gmail.com','Bastide', 'Remi','2 rue de la Paix','81000 Albi','0606060606','193011348648755',TO_DATE('1972-06-18', 'YYYY-MM-DD')),
+    ('Patient',3,'narcolin','jesuiscolin','colin.gay25@gmail.com','Gay','Colin','11 place de la République','81100 Castres','0783734322','198077578943488',TO_DATE('2001-02-25', 'YYYY-MM-DD')),
+    ('Patient',4,'flotov','velodrome13pastis','allezlom@bouillabaisse.com','Thauvin','Florian','51 rue du Pastis','13000 Marseille','0613131313','187068186734057',TO_DATE('1983-11-04', 'YYYY-MM-DD'));
 
 
-INSERT INTO Personne(DTYPE, nom, prenom, adresse, ville, numtel) VALUES 
+/*INSERT INTO Personne(DTYPE, nom, prenom, adresse, ville, numtel) VALUES 
     ('Medecin', 'Aityoucef', 'Wassim','24 rue de la Tolosane','81100 Castres','0782350075'),
     ('Medecin', 'Bastide', 'Remi','2 rue de la Paix','81000 Albi','0606060606'),
     ('Patient', 'Gay', 'Colin','11 place de la République','81100 Castres','0783734322'),
