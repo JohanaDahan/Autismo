@@ -24,8 +24,8 @@ class accelerometre {
         this.Z = Z;
     }
      
+    
     @Override  
-         
     public String toString() {
         return "accelerometre{" + "X=" + X + ", Y=" + Y + ", Z=" + Z +'}';
     }

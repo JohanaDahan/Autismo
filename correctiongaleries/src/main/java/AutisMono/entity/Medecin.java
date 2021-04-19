@@ -20,60 +20,36 @@ public class Medecin extends Utilisateur {
    private String specialite; 
    @NonNull
    private Integer diplome; 
-    
-   
-         
-    /* public int Notif(String time , int freq)
-    {
-     
-            if((freq< 80) && (freq> 40))
-            {
-                
-                System.out.println("Heart rate is normal: "+freq);
-            }
-            if(freq>=80)
-            {
-                
-                System.out.println("sending mail to doctor and neighbors because fr>80: "+freq);
-            }
-            if(freq<=40)
-            {
-                
-                System.out.println("sending mail to doctor and neighbors because fr<40: "+freq);
-            }
-            
-            return 0;    
-        }
-        return freq;
-    }
-    
-    /*@OneToMany(mappedBy = "client")
-    @ToString.Exclude
-    private List<Transaction> achats = new LinkedList<>();
-    
-    public float budgetArt(int annee) {
-        float result=0.0f;
-        for (Transaction achat : achats)
-            if (achat.getVenduLe().getYear() == annee)
-                result += achat.getPrixVente();
-        return result;
-        // Peut s'écrire en utilisant l'API Stream 
-        // cf. https://www.baeldung.com/java-stream-filter-lambda
-        /*
-        return achats.stream()
-                .filter( achat -> achat.getVenduLe().getYear() == annee) // On filtre sur l'annee
-                .map(achat -> achat.getPrixVente()) // On garde le prix de vente
-                .reduce(0f, Float::sum); // On additionne
-       
-    }*/   
 
-    public Medecin(String username, String password, String nom, String prenom, String adresse, String ville, String email, Integer numtel, String numrpps, String specialite, Integer diplome) {
+    public Medecin( String username, String password, String nom, String prenom, String adresse, String ville, String email, Integer numtel, String numrpps, String specialite, Integer diplome) {
         super(username, password, nom, prenom, adresse, ville, email, numtel);
         this.numrpps = numrpps;
         this.specialite = specialite;
         this.diplome = diplome;
     }
 
-    
+     public int Notif(String time , int fc)
+    {
+     
+            if((fc< 200) && (fc> 60))
+            {
+                
+                System.out.println("La fréquence cardiaque est: "+fc);
+            }
+            if(fc>=200)
+            {
+                
+                System.out.println("Envoyer une alerte au medecin car fr>200: "+fc);
+            }
+            if(fc<=60)
+            {
+                
+                System.out.println("Envoyer une alerte au medecin car fr<60: "+fc);
+            }
+       
+     return fc; 
+     
 }
+}
+
 
