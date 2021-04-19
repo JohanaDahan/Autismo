@@ -259,3 +259,7 @@ a {
 li.blanc {
   color: white;
 }
+.error{
+    color :red;
+    font-weight:bold;
+}
